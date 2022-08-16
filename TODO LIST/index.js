@@ -2,7 +2,9 @@ const myInput = document.querySelector(".myInput")
 const myButton = document.querySelector(".myButton")
 const myList = document.querySelector(".myList")
 
-myButton.addEventListener("click", function (event) {
+myButton.addEventListener("click", listFunc)
+
+function listFunc (event) {
     event.preventDefault()
     const myNewDiv = document.createElement('div')
     myNewDiv.setAttribute("class","thisDiv")
@@ -25,9 +27,10 @@ myButton.addEventListener("click", function (event) {
     trashButton.setAttribute("class","deleted");
     myNewDiv.append(trashButton);
     myInput.value = ""
-})
+}
 
-myList.addEventListener("click", function(event) {
+myList.addEventListener("click", buttonFunc)
+function buttonFunc(event) {
     const target = event.target;
     if(target.classList[0] === 'deleted') {
        const listToDelete = target.parentElement;
@@ -38,6 +41,6 @@ myList.addEventListener("click", function(event) {
         const listToComplete = target.parentElement;
         listToComplete.classList.toggle("doneTask")
     }
-   })
+   }
 
 
