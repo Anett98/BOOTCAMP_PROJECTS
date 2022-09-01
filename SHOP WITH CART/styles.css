@@ -1,0 +1,202 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    background-image: linear-gradient(120deg,rgb(240, 218, 198), #ffffff);
+    min-height: 100vh;
+}
+header{
+    height: 60px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 192, 152);
+    margin-bottom: 30px;
+    border-bottom: rgb(236, 192, 152) outset;
+}
+#brandName{
+    position: absolute;
+    left: 5px;
+    color: #000;
+    font-family: 'Times New Roman', Times, serif;
+}
+.bagButton {
+    position: absolute;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.bagPage{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 400px;
+    max-height: calc(100vh - 9rem);
+    min-height: 100vh;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.801);
+    box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+    transition: 0.3s;
+    z-index: 2;
+}
+.bagPage.active{
+    right: 0;
+}
+.cartTitle{
+    color: rgb(240, 218, 198);
+}
+.listedItems{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.bagImgClass {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+.details{
+    display: grid;
+    row-gap: 0.5rem;
+}
+.bagProductName{
+    font-size: 1rem;
+    color: rgb(240, 218, 198);
+    text-transform: uppercase;
+}
+.bagProductPrice{
+    font-size: 20px;
+    font-weight: 200;
+    color: rgb(240, 218, 198);
+}
+.amount{
+    border: 1px solid;
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+}
+.fa-trash{
+    font-size: 24px;
+    color: rgb(240, 218, 198);
+    cursor: pointer;
+}
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 5px solid rgb(240, 218, 198);
+}
+.totalTitle{
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: rgb(240, 218, 198);
+}
+.totalPrice{
+    color: rgb(240, 218, 198);
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+}
+.purchaseButton{
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: rgb(240, 218, 198);
+    color: #000;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.fa-close{
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    color: rgb(240, 218, 198);
+    cursor: pointer;
+}
+.imgResult{
+    height: 400px;
+    width: 300px;
+    margin-bottom: 0.5rem;
+} 
+.nameClass{
+    width: 300px;
+    height: 40px;
+    font-weight: 600;
+     text-transform: uppercase;
+} 
+.priceClass{
+    width: 300px;
+    height: 50px;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+} 
+.Body{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.results{
+    background-color: rgba(243, 238, 232, 0.904);
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    border-style: groove;
+    border-width: 1.5px;
+    border-color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 
+.results:hover{
+    border-width: 3px;
+    border-color: black;
+    transition: 0.4s;
+}
+.divForButtons{
+    position: relative;
+    list-style-type: none;
+}
+
+.likeClass{
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: black;
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+}
+.buyButton {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: black;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+}
+.fa-heart {
+    pointer-events: none;
+}
+.likedItem{
+    color: red;
+}
