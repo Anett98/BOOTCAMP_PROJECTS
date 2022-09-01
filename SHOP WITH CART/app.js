@@ -7,7 +7,6 @@ let getCart = document.querySelector('.addDiv')
 let actionsOnMyCart = document.querySelector('.bagPage')
 let searchName = document.querySelector('.nameClass')
 
- 
 
 function fetchedData () {
     return new Promise((res)=>{
@@ -43,8 +42,9 @@ pruducts()
  closeBag.onclick = () => {
    cart.classList.remove('active')
  }
-
-
+ mainBody.onclick = () => {
+    cart.classList.remove('active')
+  }
 
 
 mainBody.addEventListener("click", buttonFunc)
